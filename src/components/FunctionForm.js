@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import { Form, Button, Input } from 'semantic-ui-react';
-import findLongestPrefix from '../utilities/functions';
+import {
+  findLongestPrefix1,
+  findLongestPrefix2,
+  findLongestPrefix3
+} from '../utilities/functions';
+import DropdownMenu from './DropdownMenu';
 
 class FunctionForm extends Component {
   state = {
     inputString: '',
-    prefixes: []
+    prefixes: [],
+    functionList: []
   };
 
+  handleSelect(e) {
+    e.preventDefault();
+    this.setState({ functionList: e.target.value });
+  }
+
+  handleClick(e) {}
+
   executeFindLongestPrefix() {
-    findLongestPrefix(this.state.prefixes, this.state.inputString);
+    findLongestPrefix1(this.state.prefixes, this.state.inputString);
   }
 
   render() {
@@ -17,14 +30,22 @@ class FunctionForm extends Component {
       <div className="function-form">
         <Form>
           <Form.Field>
-            <label>Input prefixes here</label>
+            <label>Input words with prefixes</label>
+            <Input
+              labelPosition="right"
+              label="words"
+              value={this.state.prefixes}
+            />
+          </Form.Field>
+          <Button secondary>Add Word</Button>
+          <Form.Field>
+            <label>Input a string here that you want to sort prefixes</label>
             <Input />
+            <Button secondary>Add Input String</Button>
           </Form.Field>
           <Form.Field>
-            <label>Input string here</label>
-            <Input />
           </Form.Field>
-          <Button primary>Button</Button>
+          <Button primary>Execute!</Button>
         </Form>
       </div>
     );
