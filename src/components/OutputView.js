@@ -4,9 +4,15 @@ import { Container } from 'semantic-ui-react';
 export default () => {
   return (
     <div className="output-view">
-      <h3>Word List</h3>
-      <h3>Prefix Input</h3>
-      <h3>Output</h3>
+      <div className="output-view--word-list">
+        <h3>Word List</h3>
+      </div>
+      <div className="output-view--inputstring">
+        <h3>Input String</h3>
+      </div>
+      <div className="output-view--output">
+        <h1>Output</h1>
+      </div>
     </div>
   );
 };

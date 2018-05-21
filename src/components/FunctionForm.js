@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { Form, Button, Input } from 'semantic-ui-react';
-import {
-  findLongestPrefix1,
-  findLongestPrefix2,
-  findLongestPrefix3
-} from '../utilities/functions';
-import DropdownMenu from './DropdownMenu';
+import { findLongestPrefix3 } from '../utilities/functions';
 
 class FunctionForm extends Component {
   state = {
     inputString: '',
-    prefixes: [],
-    functionList: []
+    wordList: []
   };
 
   handleSelect(e) {
@@ -22,7 +16,7 @@ class FunctionForm extends Component {
   handleClick(e) {}
 
   executeFindLongestPrefix() {
-    findLongestPrefix1(this.state.prefixes, this.state.inputString);
+    findLongestPrefix3(this.state.wordList, this.state.inputString);
   }
 
   render() {
@@ -30,21 +24,34 @@ class FunctionForm extends Component {
       <div className="function-form">
         <Form>
           <Form.Field>
-            <label>Input words with prefixes</label>
+            <label>
+              Type in a set of words here. You must click add to add each
+              individual word.
+            </label>
             <Input
               labelPosition="right"
               label="words"
               value={this.state.prefixes}
             />
           </Form.Field>
-          <Button secondary>Add Word</Button>
+          <Button basic color="teal">
+            Add Word
+          </Button>
           <Form.Field>
-            <label>Input a string here that you want to sort prefixes</label>
-            <Input />
-            <Button secondary>Add Input String</Button>
+            <label>
+              Input a string here that you want find the longest prefix when
+              compared to the set of words
+            </label>
+            <Input
+              labelPosition="right"
+              label="Input String"
+              value={this.state.inputString}
+            />
           </Form.Field>
-          <Form.Field>
-          </Form.Field>
+          <Button basic color="teal">
+            Add Input String
+          </Button>
+          <Form.Field />
           <Button primary>Execute!</Button>
         </Form>
       </div>
