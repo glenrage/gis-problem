@@ -25,16 +25,14 @@ const prefixList = ['inn', 'in', 'int', 'integ', 'ind', 'init'];
 const inputString = 'integralGIS';
 
 function findLongestPrefix(arr, str) {
-  let result = '';
+  let counter = 1;
   for (var i = 0; i < arr.length; i++) {
-    let curr = arr[0][i];
-    console.log(curr);
     for (var j = 0; j < str.length; j++) {
-      let char = str[j];
-      console.log('char ', char);
+      if (arr[i].charAt(i) === str.charAt(j)) counter++;
     }
   }
-  console.log();
+  const result = inputString.substring(0, counter);
+  console.log(result);
 }
 
 findLongestPrefix(prefixList, inputString);
