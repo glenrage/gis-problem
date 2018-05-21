@@ -1,7 +1,31 @@
 img {
   height: 55%;
   width: 100%;
-  border-radius:5px;
+  border-radius: 5px;
   margin-top: 10px;
-  box-shadow: 2px 2px;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.output-view {
+  margin: 2px;
+  padding: 2px;
+  background-color: black;
+  color: #40fe10;
+  box-shadow: 2px 2px 2px black;
+}
+.output-view--word-list {
+  background-color: black;
+  color: #40fe10;
+}
+.output-view--inputstring {
+  background-color: gray;
+  color: #40fe10;
+}
+.output-view--output {
+  background-color: grey;
+  color: #40fe10;
+}
+
+.output-view h3 {
+  color: white;
 }
