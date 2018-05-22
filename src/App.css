@@ -11,45 +11,40 @@ li {
   text-align: left;
 }
 
-.function-form {
-  font-size: 20px;
-}
-
 .image-preview {
   margin-top: 10px;
 }
 
 .output-view {
+  margin: 5px 5px;
   border-radius: 5px;
   padding: 1px;
-  margin: 3px;
-  background-color: black;
+  background-color: #272b33;
   color: #40fe10;
   box-shadow: 2px 2px 2px black;
+  height: 100%;
 }
 .output-view--word-list {
   padding: 3px;
-  margin: 3px;
-  background-color: black;
+  margin-left: 8px;
+  background-color: #272b33;
   color: #40fe10;
-  letter-spacing: 1px;
-  word-spacing: 3px;
   font-size: 14px;
 }
 .output-view--inputstring {
+  margin-left: 8px;
   padding: 1px;
-  margin: 3px;
-  background-color: black;
+  background-color: #272b33;
   color: #40fe10;
   font-size: 16px;
 }
 .output-view--output {
-  padding: 2px;
-  margin: 3px;
-  background-color: black;
+  background-color: #272b33;
   color: #e8ff2d;
+  margin-left: 8px;
+  font-size: 18px;
 }
 
 .output-view h3 {
-  color: white;
+  color: #d4d4d4;
 }

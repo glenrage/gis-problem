@@ -5,46 +5,37 @@ import OutputView from './OutputView';
 import img from '../img/func.png';
 
 class FunctionForm extends Component {
-  constructor() {
-    super();
-    this.addWord = this.addWord.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleStringChange = this.handleStringChange.bind(this);
-    this.addString = this.addString.bind(this);
-    this.executeFindLongestPrefix = this.executeFindLongestPrefix.bind(this);
+  state = {
+    inputString: '',
+    wordInput: '',
+    wordList: [],
+    newInput: '',
+    outputString: ''
+  };
 
-    this.state = {
-      inputString: '',
-      wordInput: '',
-      wordList: [],
-      newInput: '',
-      outputString: ''
-    };
-  }
-
-  handleInputChange(e) {
+  handleInputChange = e => {
     e.preventDefault();
     this.setState({ wordInput: e.target.value });
-  }
+  };
 
-  handleStringChange(e) {
+  handleStringChange = e => {
     e.preventDefault();
     this.setState({ inputString: e.target.value });
-  }
+  };
 
-  addWord() {
+  addWord = () => {
     const currentWords = this.state.wordList;
     const newWords = currentWords.concat(this.state.wordInput);
     this.setState({ wordList: newWords });
     this.setState({ wordInput: '' });
-  }
+  };
 
-  addString(e) {
+  addString = e => {
     const newInput = this.state.inputString;
     this.setState({ newInput: newInput });
-  }
+  };
 
-  executeFindLongestPrefix() {
+  executeFindLongestPrefix = () => {
     const result = findLongestPrefix3(
       this.state.wordList,
       this.state.inputString
@@ -53,7 +44,7 @@ class FunctionForm extends Component {
     if (result === undefined || '' || null) {
       this.setState({ outputString: 'No Matching Prefix Found!' });
     }
-  }
+  };
 
   render() {
     return (
