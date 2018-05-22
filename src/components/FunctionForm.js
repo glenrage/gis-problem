@@ -46,6 +46,16 @@ class FunctionForm extends Component {
     }
   };
 
+  resetFields = () => {
+    this.setState({
+      inputString: '',
+      wordInput: '',
+      wordList: [],
+      newInput: '',
+      outputString: ''
+    });
+  };
+
   render() {
     return (
       <div className="function-form">
@@ -87,6 +97,11 @@ class FunctionForm extends Component {
                 <Button positive onClick={this.executeFindLongestPrefix}>
                   Execute!
                 </Button>
+                <span>
+                  <Button basic color="red" onClick={this.resetFields}>
+                    Reset
+                  </Button>
+                </span>
               </Form>
               <div className="image-preview">
                 <Image src={img} />
