@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Grid } from 'semantic-ui-react';
 
 class OutputView extends Component {
   render() {
@@ -8,8 +7,8 @@ class OutputView extends Component {
         <div className="output-view--word-list">
           <h3>Word List</h3>
           <ul>
-            {this.props.wordList.map(item => {
-              return <li key={item}>{item}</li>;
+            {this.props.wordList.map((item, key) => {
+              return <li key={key}>{item}</li>;
             })}
           </ul>
         </div>
