@@ -5,15 +5,10 @@ img {
   box-shadow: 2px 2px 2px grey;
 }
 
-label {
-  font-size: 18px;
-}
-
 ul,
 li {
   list-style-type: none;
   text-align: left;
-  /* display: inline; */
 }
 
 .function-form {
@@ -33,21 +28,23 @@ li {
   box-shadow: 2px 2px 2px black;
 }
 .output-view--word-list {
-  padding: 1px;
+  padding: 3px;
   margin: 3px;
   background-color: black;
   color: #40fe10;
   letter-spacing: 1px;
   word-spacing: 3px;
+  font-size: 14px;
 }
 .output-view--inputstring {
   padding: 1px;
   margin: 3px;
   background-color: black;
   color: #40fe10;
+  font-size: 16px;
 }
 .output-view--output {
-  padding: 1px;
+  padding: 2px;
   margin: 3px;
   background-color: black;
   color: #e8ff2d;
