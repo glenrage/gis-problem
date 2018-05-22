@@ -51,7 +51,7 @@ class FunctionForm extends Component {
     );
     this.setState({ outputString: result });
     if (result === undefined || '' || null) {
-      this.setState({ outputString: 'No Match!' });
+      this.setState({ outputString: 'No Matching Prefix Found!' });
     }
   }
 

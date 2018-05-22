@@ -19,7 +19,7 @@ class OutputView extends Component {
         </div>
 
         <div className="output-view--output">
-          <h3>Output</h3>
+          <h3>Your longest Matching Prefix is</h3>
           <p>{this.props.outputString}</p>
         </div>
       </div>
