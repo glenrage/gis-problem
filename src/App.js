@@ -17,7 +17,6 @@ class App extends Component {
           This app allows you to input a set of words, then input another word
           to find the longest prefix.
         </p>
-
         <FunctionForm />
       </Container>
     );

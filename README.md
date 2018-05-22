@@ -1,7 +1,5 @@
 # IntegralGIS-problem
 
-This was a take home coding challenge. The instructions are as follows
-
 ```
 For this coding question I am looking for you to create an implementation that finds the longest prefix to an input string.
 
@@ -16,14 +14,15 @@ abcdd
 
 Which of the top 3 is the longest prefix to the string abcdd?
 
-The answer is "abcd", because "abc" is a prefix but it is shorter than abcd, and abcdde is not a prefix to abcdd.
+The answer is "abcd", because "abc" is a prefix but it is shorter than abcd,
+ and abcdde is not a prefix to abcdd.
 ```
 
-Because the instructions said Implement however you see fit, as a coding assignment to assess skills I felt it was fitting to build a small App to test and interact with the Algorithm.
+Because the instructions said implement however you see fit, as a coding assignment to assess skills I felt it was only fitting to build a small App to test and interact with the Algorithm.
 
 [Deployed Application Link](https://peaceful-chamber-36077.herokuapp.com/)
 
-###### All solutions and commentary can be found in "problems.js" in the root directory
+###### All solutions and commentary can be found in "problem.js" in the root directory
 
 ### To install on local machine as well as run tests
 
